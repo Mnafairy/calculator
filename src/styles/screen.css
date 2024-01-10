@@ -1,0 +1,11 @@
+.screen {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: 40px;
+  color: white;
+  margin: auto;
+  background-color: #464647;
+  width: 200px;
+  height: 100px;
+}

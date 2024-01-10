@@ -4,9 +4,11 @@
   box-sizing: border-box;
   font-family: "Roboto";
 }
-.buttons {
+.mainCalc {
   margin: auto;
-  width: 250px;
+  width: 200px;
+}
+.buttons {
   display: flex;
   flex-wrap: wrap;
 }

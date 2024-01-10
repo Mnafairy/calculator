@@ -1,9 +1,10 @@
 import Button from "./components/Button";
 import { useState } from "react";
+import Screen from "./components/Screen";
 import "./styles/global.css";
 
 export default function App() {
-  const [count, setCount] = useState(0);
+  const [screenVal, setScreenVal] = useState(0);
   let buttonValues = [
     "AC",
     "+/-",
@@ -25,17 +26,22 @@ export default function App() {
     ".",
     "=",
   ];
+  function changeScreenVal(val) {
+    setScreenVal(screenVal + val);
+  }
   return (
-    <div className="buttons">
-      {buttonValues.map((e, index) => {
-        console.log("e:", e);
-        return <Button value={e} key={index} />;
-      })}
-      {count}
-      <button onClick={() => setCount(count + 1)}>+</button>
-      <button onClick={() => setCount(count - 1)}>-</button>
-      <button onClick={() => setCount(count * 5)}>*</button>
-      <button onClick={() => setCount(count / 2)}>/</button>
+    <div className="mainCalc">
+      <Screen value={screenVal} />
+      <div className="buttons">
+        {buttonValues.map((e, index) => {
+          console.log("e:", e);
+          return <Button value={e} key={index} onClick={()=>setScreenVal7u(a)=>a+value} />;
+        })}
+        {/* <Button value="1" onClick={setScreenVal} /> */}
+        {/* {count}
+        <button onClick={() => setCount(count + 1)}>+</button>
+         */}
+      </div>
     </div>
   );
 }
