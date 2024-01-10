@@ -26,16 +26,18 @@ export default function App() {
     ".",
     "=",
   ];
-  function changeScreenVal(val) {
-    setScreenVal(screenVal + val);
-  }
+  // function changeScreenVal(val) {
+  //   setScreenVal(screenVal + val);
+  // }
   return (
     <div className="mainCalc">
       <Screen value={screenVal} />
       <div className="buttons">
         {buttonValues.map((e, index) => {
           console.log("e:", e);
-          return <Button value={e} key={index} onClick={()=>setScreenVal7u(a)=>a+value} />;
+          return (
+            <Button value={e} key={index} onClick={setScreenVal(screenVal)} />
+          );
         })}
         {/* <Button value="1" onClick={setScreenVal} /> */}
         {/* {count}
