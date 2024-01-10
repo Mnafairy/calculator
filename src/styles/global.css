@@ -9,6 +9,22 @@
   width: 200px;
 }
 .buttons {
+  height: 200px;
+  width: 200px;
   display: flex;
   flex-wrap: wrap;
+}
+.topbtns {
+  display: flex;
+  flex-direction: row;
+  width: 150px;
+}
+.topbtns .calcBtn {
+  background-color: #585859;
+}
+.numbers {
+  width: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  height: 180px;
 }

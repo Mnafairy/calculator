@@ -5,7 +5,11 @@
   font-size: 40px;
   color: white;
   margin: auto;
-  background-color: #464647;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border: 1px solid var(--Stroke, #464647);
+  background: #464647;
   width: 200px;
-  height: 100px;
+  height: 80px;
+  padding: 20px 20px 8px 20px;
 }

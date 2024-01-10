@@ -1,10 +1,10 @@
 import React from "react";
 import "../styles/button.css";
 
-export default function Button({ value, onClick }) {
+export default function Button({ value, changeScreenVal }) {
   // console.log("value:", value);
   return (
-    <div className="calcBtn" onClick={() => onClick(value)}>
+    <div className="calcBtn" onClick={() => changeScreenVal(value)}>
       {value}
     </div>
   );

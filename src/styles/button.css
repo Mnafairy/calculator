@@ -2,13 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #464647;
-  background: #585859;
+  background: #777677;
   height: 48px;
   width: 50px;
   min-width: 50px;
   padding: 13px 17px 13px 16px;
-
+  border: 0.5px solid #464647;
   color: #fff;
   text-align: center;
   font-size: 24px;
