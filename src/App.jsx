@@ -16,7 +16,15 @@ export default function App() {
     setPrevScreen(currentScreen);
     setCurrentScreen("");
   }
-  function equalHandler() { 
+  function acButton() {
+    switch (todoOp) {
+      case "AC":
+        setCurrentScreen("");
+        setPrevScreen("");
+        setTodoOp("")
+    }
+  }
+  function equalHandler() {
     let result;
     switch (todoOp) {
       case "+":
@@ -32,38 +40,9 @@ export default function App() {
         result = Number(prevScreen) / Number(currentScreen) + "";
         break;
     }
-    setCurrentScreen(result);
-    // if (todoOp == "+") {
-    //   const result = Number(prevScreen) + Number(currentScreen) + "";
-    //   setCurrentScreen(result);
-    // }
-    // if (todoOp == "-") {
-    //   const result = Number(prevScreen) - Number(currentScreen) + "";
-    //   setCurrentScreen(result);
-    // }
-    // if (todoOp == "×") {
-    //   const result = Number(prevScreen) * Number(currentScreen) + "";
-    //   setCurrentScreen(result);
-    // }
-    // if (todoOp == "÷") {
-    //   const result = Number(prevScreen) / Number(currentScreen) + "";
-    //   setCurrentScreen(result);
-    // }
-    // if (todoOp == "AC") {
-    //   setCurrentScreen("");
-    //   setPrevScreen("");
-    //   setTodoOp("");
-    // }
-    // if (todoOp == "%") {
-    //   const result = Number(prevScreen) / 100 + "";
-    //   setCurrentScreen(result);
-    // }
+    setCurrentScreen(result); 
     // if (todoOp == "+/-") {
     //   const result = -1 * prevScreen;
-    //   setCurrentScreen(result);
-    // }
-    // if (todoOp == ".") {
-    //   const result = prevScreen + ".";
     //   setCurrentScreen(result);
     // }
   }
