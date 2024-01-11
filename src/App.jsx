@@ -11,48 +11,61 @@ export default function App() {
   const [currentScreen, setCurrentScreen] = useState("");
   const [prevScreen, setPrevScreen] = useState("");
   const [todoOp, setTodoOp] = useState("");
-
   function changeTodoOp(val) {
     setTodoOp(val);
     setPrevScreen(currentScreen);
     setCurrentScreen("");
   }
-
-  function equalHandler() {
-    // todoOp == "+" ? Number(prevScreen) + Number(currentScreen) + ""
-    if (todoOp == "+") {
-      const result = Number(prevScreen) + Number(currentScreen) + "";
-      setCurrentScreen(result);
+  function equalHandler() { 
+    let result;
+    switch (todoOp) {
+      case "+":
+        result = Number(prevScreen) + Number(currentScreen) + "";
+        break;
+      case "-":
+        result = Number(prevScreen) - Number(currentScreen) + "";
+        break;
+      case "×":
+        result = Number(prevScreen) * Number(currentScreen) + "";
+        break;
+      case "÷":
+        result = Number(prevScreen) / Number(currentScreen) + "";
+        break;
     }
-    if (todoOp == "-") {
-      const result = Number(prevScreen) - Number(currentScreen) + "";
-      setCurrentScreen(result);
-    }
-    if (todoOp == "×") {
-      const result = Number(prevScreen) * Number(currentScreen) + "";
-      setCurrentScreen(result);
-    }
-    if (todoOp == "÷") {
-      const result = Number(prevScreen) / Number(currentScreen) + "";
-      setCurrentScreen(result);
-    }
-    if (todoOp == "AC") {
-      setCurrentScreen("");
-      setPrevScreen("");
-      setTodoOp("");
-    }
-    if (todoOp == "%") {
-      const result = Number(prevScreen) / 100 + "";
-      setCurrentScreen(result);
-    }
-    if (todoOp == "+/-") {
-      const result = "-" + prevScreen;
-      setCurrentScreen(result);
-    }
-    if (todoOp == ".") {
-      const result = prevScreen + ".";
-      setCurrentScreen(result);
-    }
+    setCurrentScreen(result);
+    // if (todoOp == "+") {
+    //   const result = Number(prevScreen) + Number(currentScreen) + "";
+    //   setCurrentScreen(result);
+    // }
+    // if (todoOp == "-") {
+    //   const result = Number(prevScreen) - Number(currentScreen) + "";
+    //   setCurrentScreen(result);
+    // }
+    // if (todoOp == "×") {
+    //   const result = Number(prevScreen) * Number(currentScreen) + "";
+    //   setCurrentScreen(result);
+    // }
+    // if (todoOp == "÷") {
+    //   const result = Number(prevScreen) / Number(currentScreen) + "";
+    //   setCurrentScreen(result);
+    // }
+    // if (todoOp == "AC") {
+    //   setCurrentScreen("");
+    //   setPrevScreen("");
+    //   setTodoOp("");
+    // }
+    // if (todoOp == "%") {
+    //   const result = Number(prevScreen) / 100 + "";
+    //   setCurrentScreen(result);
+    // }
+    // if (todoOp == "+/-") {
+    //   const result = -1 * prevScreen;
+    //   setCurrentScreen(result);
+    // }
+    // if (todoOp == ".") {
+    //   const result = prevScreen + ".";
+    //   setCurrentScreen(result);
+    // }
   }
   function changeScreenVal(val) {
     setCurrentScreen(currentScreen + val);
@@ -98,3 +111,4 @@ export default function App() {
 /* {count}
         <button onClick={() => setCount(count + 1)}>+</button>
          */
+//use switch case
